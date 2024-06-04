@@ -1,0 +1,31 @@
+﻿<Window x:Class="PathLists.AddWindows.AddPath"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PathLists.AddWindows"
+        mc:Ignorable="d"
+        Title="AddPath" Height="450" Width="800">
+    <Grid Background="LightYellow">
+        <Border MinWidth="400" Margin="15" VerticalAlignment="Center" Padding="30"
+MaxWidth="550" CornerRadius="20" Background="#FFA8DAB9">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"/>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Добавление пути" TextAlignment="Center" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"/>
+                <DatePicker x:Name="TextBoxDepartureNumber" materialDesign:HintAssist.Hint="Введите дату выезда" Style="{StaticResource MaterialDesignDatePicker}"/>
+                <DatePicker x:Name="TextBoxReturnNumber" materialDesign:HintAssist.Hint="Введите дату возвращения" Style="{StaticResource MaterialDesignDatePicker}"/>
+                <TextBox x:Name="Destination" materialDesign:HintAssist.Hint="Введите пункт назначения" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <TextBox x:Name="Startmileage" materialDesign:HintAssist.Hint="Введите начальный пробег" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <TextBox x:Name="Endmileage" materialDesign:HintAssist.Hint="Введите конечный пробег" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <TextBox x:Name="JobNumber" materialDesign:HintAssist.Hint="Введите табельный номер" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <TextBox x:Name="IdNumber" materialDesign:HintAssist.Hint="Введите идентификационный номер" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+
+                <Button Content="Добавить" Margin="0 20" Click="Button_Add_Click"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+    
+</Window>
