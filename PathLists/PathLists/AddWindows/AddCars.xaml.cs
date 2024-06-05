@@ -31,7 +31,7 @@ namespace PathLists.AddWindows
             db = new ApplicationContext();
         }
 
-        private void Button_Add_Click(object sender, RoutedEventArgs e)
+        private void Button_Add_Click(object sender, RoutedEventArgs e) // Обработчик событий для кнопки, предназначенный для валидации, сохранения данных и перехода в окно просмотра автомобилей
         {
             string[] license = TextBoxLicenseNumber.Text.Split(' ');
             string brand = TextBoxBrand.Text.Trim(), year = TextBoxYear.Text.Trim();
@@ -62,17 +62,19 @@ namespace PathLists.AddWindows
             }
         }
 
-        private void addCar(string license, string brand, string year)
+        private void addCar(string license, string brand, string year) // Метод добавления автомобилей в базу данных
         {
             Cars car = new Cars(license, brand, year);
             db.Cars.Add(car);
             db.SaveChanges();
-                
+
+            goWindowCar();
+        }
+        private void goWindowCar()
+        {
             WindowCars mainWindow = new WindowCars();
             Visibility = Visibility.Hidden;
             mainWindow.Show();
-            
-
         }
     }
 }

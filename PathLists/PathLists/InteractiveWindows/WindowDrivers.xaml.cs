@@ -32,7 +32,7 @@ namespace PathLists.InteractiveWindows
             db = new ApplicationContext();
             DGrid.ItemsSource = db.Drivers.ToList();
 
-            if (WindowAuth.CurrentRole == 1)
+            if (WindowAuth.CurrentRole == 1) // Определение функционала приложения в зависимости от должности пользователя
             {
                 Delete.Visibility = Visibility.Hidden;
                 Add.Visibility = Visibility.Hidden;
@@ -44,7 +44,7 @@ namespace PathLists.InteractiveWindows
             }
         }
 
-        private void EditBtn_Click(object sender, RoutedEventArgs e)
+        private void EditBtn_Click(object sender, RoutedEventArgs e) // Обработчик события для кнопки, предназначенный для перехода в окно редактирования
         {
             if (DGrid.SelectedItem != null)
             {
@@ -60,7 +60,7 @@ namespace PathLists.InteractiveWindows
             
         }
 
-        private void btnBack_Click(object sender, RoutedEventArgs e)
+        private void btnBack_Click(object sender, RoutedEventArgs e) // Обработчик события для кнопки, предназначенный для перехода в личный кабинет 
         {
             PersonalCabinet mainWindow = new PersonalCabinet();
             Visibility = Visibility.Hidden;
@@ -69,7 +69,7 @@ namespace PathLists.InteractiveWindows
 
         
 
-        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        private void btnDelete_Click(object sender, RoutedEventArgs e) // Обработчик события для кнопки, предназначенный для удаления записей
         {
             if (DGrid.SelectedIndex != -1)
             {
@@ -88,7 +88,7 @@ namespace PathLists.InteractiveWindows
             }
         }
 
-        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        private void btnAdd_Click(object sender, RoutedEventArgs e) // Обработчик события для кнопки, предназначенный для перехода в окно добавления записей
         {
             AddDriver mainWindow = new AddDriver();
             Visibility = Visibility.Hidden;

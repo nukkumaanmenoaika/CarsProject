@@ -31,7 +31,7 @@ namespace PathLists.AddWindows
             db = new ApplicationContext();
         }
 
-        private void Button_Add_Click(object sender, RoutedEventArgs e)
+        private void Button_Add_Click(object sender, RoutedEventArgs e) // Обработчик событий для кнопки, предназначенный для валидации, сохранения данных и перехода в окно списка путей
         {
 
             try
@@ -99,7 +99,7 @@ namespace PathLists.AddWindows
             catch { }
         }
 
-        private List<int> prepareCars()
+        private List<int> prepareCars() // Метод, формирующий массив из идентификаторов автомобилей
         {
             List<Cars> cars = db.Cars.ToList();
             List<int> result = new List<int>();
@@ -109,7 +109,7 @@ namespace PathLists.AddWindows
             }
             return result;
         }
-        private List<int> prepareDrivers()
+        private List<int> prepareDrivers() // Метод, формирующий массив из идентификаторов водитлей
         {
             List<Drivers> drivers = db.Drivers.ToList();
             List<int> result = new List<int>();
@@ -120,16 +120,18 @@ namespace PathLists.AddWindows
             return result;
         }
 
-        private void addPath(int startmileage, int endmileage, int jobnumber, int idnumber, string departuredate, string returndate, string dest)
+        private void addPath(int startmileage, int endmileage, int jobnumber, int idnumber, string departuredate, string returndate, string dest) // Метод добавления записи в таблицу путей
         {
             NumberPathList path = new NumberPathList(dest, jobnumber, startmileage, endmileage,  returndate, departuredate, idnumber);
             db.NumberPathList.Add(path);
             db.SaveChanges();
-
+            goWindowPathList();
+        }
+        private void goWindowPathList() // Метод для перехода в окно просмотра путей
+        {
             WindowPathsList mainWindow = new WindowPathsList();
             Visibility = Visibility.Hidden;
             mainWindow.Show();
-
         }
     }
 }

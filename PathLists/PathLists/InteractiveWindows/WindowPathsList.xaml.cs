@@ -30,7 +30,7 @@ namespace PathLists.InteractiveWindows
             db = new ApplicationContext();
             DGrid.ItemsSource = db.NumberPathList.ToList();
             
-            if (WindowAuth.CurrentRole == 1)
+            if (WindowAuth.CurrentRole == 1) // Определение функционала приложения в зависимости от должности пользователя
             {
                 Add.Visibility = Visibility.Hidden;
                 Delete.Visibility = Visibility.Hidden;
@@ -48,21 +48,21 @@ namespace PathLists.InteractiveWindows
 
         }
 
-        private void btnBack_Click(object sender, RoutedEventArgs e)
+        private void btnBack_Click(object sender, RoutedEventArgs e) // Обработчик события для кнопки, предназначенный для перехода в личный кабинет  
         {
             PersonalCabinet mainWindow = new PersonalCabinet();
             Visibility = Visibility.Hidden;
             mainWindow.Show();
         }
 
-        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        private void btnAdd_Click(object sender, RoutedEventArgs e) // // Обработчик события для кнопки, предназначенный для перехода в окно добавления записи
         {
             AddPath mainWindow = new AddPath();
             Visibility = Visibility.Hidden;
             mainWindow.Show();
         }
 
-        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        private void btnDelete_Click(object sender, RoutedEventArgs e) // Обработчик события для кнопки, предназначенный для удаления записей
         {
             if (DGrid.SelectedIndex != -1)
             {

@@ -29,7 +29,7 @@ namespace PathLists.AddWindows
         {
             InitializeComponent();
             db = new ApplicationContext();
-            Name.Text += CommonVariables.driver.Name;
+            Name.Text += CommonVariables.driver.Name; // Инициализация начальный данных
             Surname.Text += CommonVariables.driver.Surname;
             Patronymic.Text += CommonVariables.driver.Patronymic;
             Category.Text += CommonVariables.driver.driver_license;
@@ -37,7 +37,7 @@ namespace PathLists.AddWindows
 
        
 
-        private void Button_Add_Click(object sender, RoutedEventArgs e)
+        private void Button_Add_Click(object sender, RoutedEventArgs e) // Обработчик событий для кнопки, предназначенный для валидации, сохранения данных и перехода в окно водителей
         {
             string name = NameAdd.Text.Trim(),
                 surname = SurnameAdd.Text.Trim(),

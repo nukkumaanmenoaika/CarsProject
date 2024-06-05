@@ -32,7 +32,7 @@ namespace PathLists.InteractiveWindows
             DGrid.ItemsSource = prepareData();
         }
 
-        private void btnBack_Click(object sender, RoutedEventArgs e)
+        private void btnBack_Click(object sender, RoutedEventArgs e) // Обработчик события для кнопки, предназначенный для перехода в личный кабинет
         {
             PersonalCabinet mainWindow = new PersonalCabinet();
             Visibility = Visibility.Hidden;
@@ -40,7 +40,7 @@ namespace PathLists.InteractiveWindows
         }
 
 
-        private List<AnalysisPaths>  prepareData()
+        private List<AnalysisPaths>  prepareData() // Метод, который структурирует отображаемые данные в компновке DataGrid
         {
             List<Cars> cars = db.Cars.ToList(); 
             List<NumberPathList> paths = db.NumberPathList.ToList();    

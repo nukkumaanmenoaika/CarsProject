@@ -30,7 +30,7 @@ namespace PathLists.AuthWindows
             db = new ApplicationContext();
         }
 
-        private void Button_Reg_Click(object sender, RoutedEventArgs e)
+        private void Button_Reg_Click(object sender, RoutedEventArgs e) // Обработчик события для кнопки, предназначенный для валидации входных данных
         {
             string login = TextBoxLogin.Text.Trim(),
                 name = TextBoxName.Text.Trim(),
@@ -98,18 +98,18 @@ namespace PathLists.AuthWindows
                 Saving(name, surname, patronymic, drivelicense, login, pass_1);
             }
         }
-        private void Saving(string name, string surname, string patronymic, string drivelicense, string login, string password)
+        private void Saving(string name, string surname, string patronymic, string drivelicense, string login, string password) // Метода сохранения данных, которые прошли валидацию
         {
             Drivers user = new Drivers(name, surname, patronymic, drivelicense, login, password);
             db.Drivers.Add(user);
             db.SaveChanges();
             NavigateGoAuth();
         }
-        private void Button_GoAuth_Click(object sender, RoutedEventArgs e)
+        private void Button_GoAuth_Click(object sender, RoutedEventArgs e) // Обработчик события для кнопки, предназначенный для перехода в окно авторизации
         {
             NavigateGoAuth();
         }
-        private void NavigateGoAuth()
+        private void NavigateGoAuth() // Метод перехода в окно авторизации
         {
             WindowAuth mainWindow = new WindowAuth();
             Visibility = Visibility.Hidden;

@@ -22,13 +22,13 @@ namespace PathLists.AuthWindows
     public partial class WindowAuth : Window
     {
         private static int currentID;
-        public static int CurrentID
+        public static int CurrentID // Переменная, которая хранит в себе настоящий идентификатор пользователя, который успешно прошел авторизацию
         {
             get { return currentID; }
             set { currentID = value; }
         }
         private static int currentRole;
-        public static int CurrentRole
+        public static int CurrentRole // Переменная, которая хранит в себе должность пользователя, который успешно прошел авторизацию
         {
             get { return currentRole; }
             set { currentRole = value; }
@@ -39,14 +39,14 @@ namespace PathLists.AuthWindows
             InitializeComponent();
         }
 
-        private void Button_GoReg_Click(object sender, RoutedEventArgs e)
-        {
+        private void Button_GoReg_Click(object sender, RoutedEventArgs e) {  // Обработчик события для кнопки, который предназначен для перехода в окно регистрации
             WindowReg mainWindow = new WindowReg();
             Visibility = Visibility.Hidden;
             mainWindow.Show();
         }
 
-        private void Button_Auth_Click(object sender, RoutedEventArgs e)
+        private void Button_Auth_Click(object sender, RoutedEventArgs e) // Обработчик события для кнопки, который предназначен для валидации входных данных
+
         {
             string login = TextBoxLogin.Text.Trim(), pass_1 = passbox_1.Password.Trim();
             if (login.Length < 5)
@@ -69,8 +69,8 @@ namespace PathLists.AuthWindows
             }
         }
 
-        private void checkAccess(string login, string password)
-        {
+        private void checkAccess(string login, string password)  // Метод, который проверяет существует ли данный пользователь в базе данных и выдает доступ
+        {                                                        // Помимо этого присваивает соотвествущее значение CurrentID и CurrentRole
             Drivers authUser = null;
             using (ApplicationContext db = new ApplicationContext())
             {

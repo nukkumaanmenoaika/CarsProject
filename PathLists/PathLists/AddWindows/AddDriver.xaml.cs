@@ -31,8 +31,8 @@ namespace PathLists.AddWindows
             db = new ApplicationContext();
         }
 
-        private void Button_Reg_Click(object sender, RoutedEventArgs e)
-        {
+        private void Button_Reg_Click(object sender, RoutedEventArgs e) // Обработчик событий для кнопки, предназначенный для валидации, сохранения данных и перехода в окно просмотра водителей
+        { 
             string login = TextBoxLogin.Text.Trim(),
                 name = TextBoxName.Text.Trim(),
                 surname = TextBoxSurname.Text.Trim(),
@@ -99,7 +99,7 @@ namespace PathLists.AddWindows
                 Saving(name, surname, patronymic, drivelicense, login, pass_1);
             }
         }
-        private void Saving(string name, string surname, string patronymic, string drivelicense, string login, string password)
+        private void Saving(string name, string surname, string patronymic, string drivelicense, string login, string password) // Метод сохранения данных в базу данных
         {
             Drivers user = new Drivers(name, surname, patronymic, drivelicense, login, password);
             db.Drivers.Add(user);
@@ -107,7 +107,7 @@ namespace PathLists.AddWindows
             NavigateGoAuth();
         }
         
-        private void NavigateGoAuth()
+        private void NavigateGoAuth() // Метод для перехода в окно просмотра водителей
         {
             WindowDrivers mainWindow = new WindowDrivers();
             Visibility = Visibility.Hidden;
