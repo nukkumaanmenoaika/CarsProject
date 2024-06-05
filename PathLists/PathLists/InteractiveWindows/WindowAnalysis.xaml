@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="WindowAnalysis" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="DGrid" AutoGenerateColumns="False" IsReadOnly="True">
+        <DataGrid x:Name="DGrid" AutoGenerateColumns="False" IsReadOnly="True" Background="#FFA7FFF0">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Гос Номер" Binding="{Binding License_number}" Width="*"></DataGridTextColumn>
                 <DataGridTextColumn Header="Пробег" Binding="{Binding Mileage}" Width="*"></DataGridTextColumn>

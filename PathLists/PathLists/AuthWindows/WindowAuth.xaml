@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:PathLists.AuthWindows"
         mc:Ignorable="d"
         Title="WindowAuth" Height="450" Width="800">
-    <Grid Background="LightYellow">
+    <Grid Background="#FFCFDE49">
         <Border MinWidth="400" Margin="15" VerticalAlignment="Center" Padding="30"
      MaxWidth="550" CornerRadius="20" Background="#FFA8DAB9">
             <Border.Effect>

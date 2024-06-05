@@ -8,7 +8,7 @@
         Title="WindowPathsList" Height="450" Width="800">
 
     <Grid>
-        <DataGrid x:Name="DGrid" AutoGenerateColumns="False" IsReadOnly="True">
+        <DataGrid x:Name="DGrid" AutoGenerateColumns="False" IsReadOnly="True" Background="#FFA7FFF0">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="№" Binding="{Binding id}" Width="50"></DataGridTextColumn>
                 <DataGridTextColumn Header="Пункт назначения" Binding="{Binding Destination}" Width="*"></DataGridTextColumn>

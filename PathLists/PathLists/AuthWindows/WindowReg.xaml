@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="WindowReg" Height="650" Width="800">
-    <Grid>
+    <Grid Background="#FFCFDE49">
         <Border MinWidth="400" Margin="15" VerticalAlignment="Center" Padding="30"
  MaxWidth="550" CornerRadius="20" Background="#FFA8DAB9" Height="500">
             <Border.Effect>
