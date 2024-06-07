@@ -75,12 +75,28 @@ namespace PathLists.InteractiveWindows
             {
                 Drivers a = DGrid.SelectedItem as Drivers;
                 db = new ApplicationContext();
-                var order = db.Drivers.Where(c => c.id == a.id).FirstOrDefault();
-                db.Drivers.Remove(order);
-                db.SaveChanges();
-                WindowDrivers mainWindow = new WindowDrivers();
-                Visibility = Visibility.Hidden;
-                mainWindow.Show();
+                bool existCar = false;
+                foreach (var path in db.NumberPathList.ToList())
+                {
+                    if (path.job_Number == a.id)
+                    {
+                        existCar = true;
+                        break;
+                    }
+                }
+                if (!existCar)
+                {
+                    var order = db.Drivers.Where(c => c.id == a.id).FirstOrDefault();
+                    db.Drivers.Remove(order);
+                    db.SaveChanges();
+                    WindowDrivers mainWindow = new WindowDrivers();
+                    Visibility = Visibility.Hidden;
+                    mainWindow.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Данные уже используются!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
             else
             {

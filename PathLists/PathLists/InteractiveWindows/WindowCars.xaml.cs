@@ -66,12 +66,28 @@ namespace PathLists.InteractiveWindows
             {
                 Cars a = DGrid.SelectedItem as Cars;
                 db = new ApplicationContext();
-                var order = db.Cars.Where(c => c.id == a.id).FirstOrDefault();
-                db.Cars.Remove(order);
-                db.SaveChanges();
-                WindowCars mainWindow = new WindowCars();
-                Visibility = Visibility.Hidden;
-                mainWindow.Show();
+                bool existCar = false;
+                foreach (var path in db.NumberPathList.ToList())
+                {
+                    if (path.id_number == a.id)
+                    {
+                        existCar = true;
+                        break;
+                    }
+                }
+                if (!existCar)
+                {
+                    var order = db.Cars.Where(c => c.id == a.id).FirstOrDefault();
+                    db.Cars.Remove(order);
+                    db.SaveChanges();
+                    WindowCars mainWindow = new WindowCars();
+                    Visibility = Visibility.Hidden;
+                    mainWindow.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Данные пользователя уже используются!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
             else
             {

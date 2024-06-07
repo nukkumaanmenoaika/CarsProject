@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\у\Desktop\CarsProject\PathLists\PathLists\obj\Debug\
+C:\Users\Ametsa\CarsProject\PathLists\PathLists\obj\Debug\
 PathLists
 none
 false
 DEBUG;TRACE
-C:\Users\у\Desktop\CarsProject\PathLists\PathLists\App.xaml
+C:\Users\Ametsa\CarsProject\PathLists\PathLists\App.xaml
 122086570855
 
 23949261177
-221642476503
+22-1103040155
 AddWindows\AddCars.xaml;AddWindows\AddDriver.xaml;AddWindows\AddPath.xaml;AddWindows\EditDriver.xaml;AuthWindows\WindowAuth.xaml;AuthWindows\WindowReg.xaml;InteractiveWindows\PersonalCabinet.xaml;InteractiveWindows\WindowAnalysis.xaml;InteractiveWindows\WindowCars.xaml;InteractiveWindows\WindowDrivers.xaml;InteractiveWindows\WindowPathsList.xaml;MainWindow.xaml;
 
 False
