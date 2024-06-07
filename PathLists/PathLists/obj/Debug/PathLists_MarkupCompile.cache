@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Ametsa\CarsProject\PathLists\PathLists\App.xaml
-122086570855
+13-833619605
 
-23949261177
+241143371889
 22-1103040155
-AddWindows\AddCars.xaml;AddWindows\AddDriver.xaml;AddWindows\AddPath.xaml;AddWindows\EditDriver.xaml;AuthWindows\WindowAuth.xaml;AuthWindows\WindowReg.xaml;InteractiveWindows\PersonalCabinet.xaml;InteractiveWindows\WindowAnalysis.xaml;InteractiveWindows\WindowCars.xaml;InteractiveWindows\WindowDrivers.xaml;InteractiveWindows\WindowPathsList.xaml;MainWindow.xaml;
+AddWindows\AddCars.xaml;AddWindows\AddDriver.xaml;AddWindows\AddPath.xaml;AddWindows\EditDriver.xaml;AddWindows\Filter.xaml;AuthWindows\WindowAuth.xaml;AuthWindows\WindowReg.xaml;InteractiveWindows\PersonalCabinet.xaml;InteractiveWindows\WindowAnalysis.xaml;InteractiveWindows\WindowCars.xaml;InteractiveWindows\WindowDrivers.xaml;InteractiveWindows\WindowPathsList.xaml;MainWindow.xaml;
 
 False
 

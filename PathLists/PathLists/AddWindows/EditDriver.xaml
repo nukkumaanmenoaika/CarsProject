@@ -32,7 +32,6 @@ MaxWidth="550" CornerRadius="20" Background="#FF73E0CE">
                         <TextBlock x:Name="Category" Text="Категория прав: "/>
                         <TextBox  x:Name="CategoryAdd" materialDesign:HintAssist.Hint="Введите категорию прав" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
                     </StackPanel>
-
                     <Button Content="Добавить" Margin="0 20" Click="Button_Add_Click"/>
                 </StackPanel>
             </StackPanel>

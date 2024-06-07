@@ -15,5 +15,6 @@ namespace PathLists.Classes
         public static string errorField = "Это поле введено не корректно!";
         public static string fixedField = " ";
         public static Drivers driver;
+        public static string city = "";
     }
 }

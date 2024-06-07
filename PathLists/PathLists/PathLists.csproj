@@ -95,6 +95,9 @@
     <Compile Include="AddWindows\EditDriver.xaml.cs">
       <DependentUpon>EditDriver.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AddWindows\Filter.xaml.cs">
+      <DependentUpon>Filter.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Classes\CommonVariables.cs" />
     <Compile Include="Classes\DriversContainer.cs" />
     <Compile Include="InteractiveWindows\PersonalCabinet.xaml.cs">
@@ -130,6 +133,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AddWindows\EditDriver.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddWindows\Filter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

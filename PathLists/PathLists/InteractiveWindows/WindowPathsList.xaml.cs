@@ -14,6 +14,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using PathLists.Classes;
 
 namespace PathLists.InteractiveWindows
 {
@@ -28,8 +29,15 @@ namespace PathLists.InteractiveWindows
         {
             InitializeComponent();
             db = new ApplicationContext();
-            DGrid.ItemsSource = db.NumberPathList.ToList();
-            
+            if (CommonVariables.city == "")
+            {
+                DGrid.ItemsSource = db.NumberPathList.ToList();
+
+            }
+            else
+            {
+                DGrid.ItemsSource = prepareData();
+            }
             if (WindowAuth.CurrentRole == 1) // Определение функционала приложения в зависимости от должности пользователя
             {
                 Add.Visibility = Visibility.Hidden;
@@ -41,6 +49,19 @@ namespace PathLists.InteractiveWindows
                 Delete.Visibility = Visibility.Hidden;
             }
             
+        }
+
+        private List<NumberPathList> prepareData()
+        {
+            List<NumberPathList> paths = new List<NumberPathList>();  
+            foreach(var  path in db.NumberPathList.ToList()) 
+            {
+                if (path.Destination == CommonVariables.city)
+                {
+                    paths.Add(path);
+                }
+            }
+            return paths;
         }
 
         private void EditBtn_Click(object sender, RoutedEventArgs e)
@@ -79,6 +100,13 @@ namespace PathLists.InteractiveWindows
             {
                 MessageBox.Show("Водитель не выбран", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void btnFilter_Click(object sender, RoutedEventArgs e)
+        {
+            Filter mainWindow = new Filter();
+            Visibility = Visibility.Hidden;
+            mainWindow.Show();
         }
     }
 }

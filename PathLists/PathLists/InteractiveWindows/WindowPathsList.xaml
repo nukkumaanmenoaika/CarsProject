@@ -23,6 +23,7 @@
         <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" HorizontalAlignment="Right">
             <Button Name = "Add" Content="Добавить"   Click="btnAdd_Click"/>
             <Button Name = "Delete" Content="Удалить"   Click="btnDelete_Click" />
+            <Button Name = "Filter" Content="Фильтр"   Click="btnFilter_Click" />
             <Button Content="Назад"  Click="btnBack_Click"/>
         </StackPanel>
     </Grid>

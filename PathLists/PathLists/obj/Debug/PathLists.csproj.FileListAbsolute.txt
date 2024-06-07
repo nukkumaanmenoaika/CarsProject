@@ -214,3 +214,5 @@ C:\Users\Ametsa\CarsProject\PathLists\PathLists\obj\Debug\PathLists.csproj.CoreC
 C:\Users\Ametsa\CarsProject\PathLists\PathLists\obj\Debug\PathLists.csproj.CopyComplete
 C:\Users\Ametsa\CarsProject\PathLists\PathLists\obj\Debug\PathLists.exe
 C:\Users\Ametsa\CarsProject\PathLists\PathLists\obj\Debug\PathLists.pdb
+C:\Users\Ametsa\CarsProject\PathLists\PathLists\obj\Debug\AddWindows\Filter.g.cs
+C:\Users\Ametsa\CarsProject\PathLists\PathLists\obj\Debug\AddWindows\Filter.baml
